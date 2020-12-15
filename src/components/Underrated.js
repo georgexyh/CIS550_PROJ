@@ -69,13 +69,13 @@ export default class Underrated extends React.Component {
   render() {
     return (
       <div className="Dashboard">
-        <PageNavbar active="underrated_songs"/>
+        <PageNavbar active="hidden_gems"/>
 
         <br></br>
         <div className="container head-container">
           <div className="h5">
             {" "}
-            <h3 style={{textAlign: 'center'}}>Underrated Songs </h3>
+            <h3 style={{textAlign: 'center'}}>Hidden Gems </h3>
           </div>
 
           <br></br>

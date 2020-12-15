@@ -58,13 +58,13 @@ export default class ByStream extends React.Component {
   render() {
     return (
       <div className="Dashboard">
-        <PageNavbar active="byStream" />
+        <PageNavbar active="byStreams" />
 
         <br></br>
         <div className="container head-container">
           <div className="h5">
             {" "}
-            <h3 style={{textAlign: 'center'}}> Highest Stream Songs </h3>
+            <h3 style={{textAlign: 'center'}}> Highest Streaming Songs </h3>
           </div>
 
           <br></br>

@@ -38,7 +38,7 @@ export default class Spotify extends React.Component {
         method: "GET", // The type of HTTP request.
       }
     )
-      .then((res) => res.json()) // Convert the response data to a JSON.
+      .then((res) => res.data) // Convert the response data to a JSON.
       .then((list) => {
         let temp = list.map((song, i) => {
           return [song.songName, song.artists, song.genre];

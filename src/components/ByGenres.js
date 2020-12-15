@@ -74,13 +74,13 @@ export default class ByGenres extends React.Component {
   render() {
     return (
       <div className="Dashboard">
-        <PageNavbar active="byGenres" />
+        <PageNavbar active="byGenre" />
 
         <br></br>
         <div className="container head-container">
           <div className="h5">
             {" "}
-            <h3 style={{ textAlign: "center" }}>Search by Genres </h3>
+            <h3 style={{ textAlign: "center" }}>Search by Genre </h3>
           </div>
 
           <br></br>

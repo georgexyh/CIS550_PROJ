@@ -23,9 +23,9 @@ export default class App extends React.Component {
 
             <Route path="/billboard_exclusive" render={() => <Billboard />} />
 
-            <Route path="/underrated_songs" render={() => <Underrated />} />
-            <Route path="/bygenres" render={() => <ByGenres />} />
-            <Route path="/bystream" render={() => <ByStream />} />
+            <Route path="/hidden_gems" render={() => <Underrated />} />
+            <Route path="/bygenre" render={() => <ByGenres />} />
+            <Route path="/bystreams" render={() => <ByStream />} />
           </Switch>
         </Router>
       </div>
