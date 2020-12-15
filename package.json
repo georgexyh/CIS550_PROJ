@@ -2,7 +2,6 @@
   "name": "videos",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://54.90.75.139:8080", 
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.5.3",
