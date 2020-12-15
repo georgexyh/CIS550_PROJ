@@ -3,6 +3,7 @@ import "../style/Spotify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavbar from "./PageNavbar";
 import SpotifyRows from "./SpotifyRows";
+import Axios from "axios";
 
 export default class ByStream extends React.Component {
   constructor(props) {
@@ -22,13 +23,13 @@ export default class ByStream extends React.Component {
 
   // set the song rows
   showSongs() {
-    fetch(
+    Axios(
       `http://54.90.75.139:8080/api/song/recommendation?genre=${this.state.genre}`,
       {
         method: "GET", // The type of HTTP request.
       }
     )
-      .then((res) => res.json()) // Convert the response data to a JSON.
+      .then((res) => res.data) // Convert the response data to a JSON.
       .then((list) => {
         let temp = list.map((song, i) => {
           return [song.song, song.artist];

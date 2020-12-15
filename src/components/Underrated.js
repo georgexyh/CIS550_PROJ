@@ -3,6 +3,7 @@ import "../style/Songs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavbar from "./PageNavbar";
 import HitSongRows from "./HitSongRows";
+import Axios from "axios";
 
 export default class Underrated extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class Underrated extends React.Component {
       alert("Please input valid years");
       return;
     }
-    fetch(
+    Axios(
       `http://54.90.75.139:8080/api/song/spotify?startYear=${this.state.startYear}&endYear=${this.state.endYear}`,
       {
         method: "GET", // The type of HTTP request.

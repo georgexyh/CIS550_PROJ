@@ -5,6 +5,7 @@ import PageNavbar from "./PageNavbar";
 import HitSongRows from "./HitSongRows";
 import Toggle from "react-toggle";
 import "react-toggle/style.css"
+import Axios from "axios";
 
 export default class ByGenres extends React.Component {
   constructor(props) {
@@ -25,14 +26,14 @@ export default class ByGenres extends React.Component {
 
   // set the song rows
   showSongs() {
-    fetch(
+    Axios(
       `
       http://54.90.75.139:8080/api/song/top_genre?year=${this.state.year}&genre=${this.state.genre}&orderby=${this.state.ifOrder}`,
       {
         method: "GET", // The type of HTTP request.
       }
     )
-      .then((res) => res.json()) // Convert the response data to a JSON.
+      .then((res) => res.data) // Convert the response data to a JSON.
       .then((list) => {
         let temp = list.map((song, i) => {
           return [song.songName, song.artists, song.genre];

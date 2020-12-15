@@ -3,6 +3,7 @@ import "../style/Spotify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavbar from "./PageNavbar";
 import SpotifyRows from "./SpotifyRows";
+import Axios from "axios";
 
 export default class Spotify extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class Spotify extends React.Component {
       alert("Please input valid years");
       return;
     }
-    fetch(
+    Axios(
       `http://54.90.75.139:8080/api/song/spotify?startYear=${this.state.startYear}&endYear=${this.state.endYear}`,
       {
         method: "GET", // The type of HTTP request.

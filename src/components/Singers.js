@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../style/Singers.css";
 import PageNavbar from "./PageNavbar";
 import SingerRow from "./SingerRow";
+import axios from "axios";
 
 export default class Singers extends Component {
   constructor(props) {
@@ -13,10 +14,10 @@ export default class Singers extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://54.90.75.139:8080/api/artist/most_prolific`, {
+    axios(`http://54.90.75.139:8080/api/artist/most_prolific`, {
       method: "GET", // The type of HTTP request.
     })
-      .then((res) => res.json()) // Convert the response data to a JSON.
+      .then((res) => res.data) // Convert the response data to a JSON.
       .then((list) => {
         let temp = list.map((singer, i) => {
           return [singer.artist, singer.count];

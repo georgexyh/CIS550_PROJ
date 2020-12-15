@@ -3,6 +3,8 @@ import "../style/Songs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavbar from "./PageNavbar";
 import HitSongRows from "./HitSongRows";
+import axios from "axios";
+
 
 export default class Billboard extends React.Component {
   constructor(props) {
@@ -31,13 +33,13 @@ export default class Billboard extends React.Component {
       alert("Please input valid years");
       return;
     }
-    fetch(
+    axios(
       `http://54.90.75.139:8080/api/song/range?startYear=${this.state.startYear}&endYear=${this.state.endYear}`,
       {
         method: "GET", // The type of HTTP request.
       }
     )
-      .then((res) => res.json()) // Convert the response data to a JSON.
+      .then((res) => res.data) // Convert the response data to a JSON.
       .then((list) => {
         let temp = list.map((song, i) => {
           return [song.songName, song.artists, song.genre];
