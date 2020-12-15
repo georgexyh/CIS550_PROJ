@@ -17,10 +17,10 @@ export default class Home extends React.Component {
                 style={{
                   textAlign: "center",
                   color: "whitesmoke",
-                  fontSize: "500%",
+                  fontSize: "700%",
                 }}
               >
-                mUsic Search
+                mUsic
               </h1>
             </div>
           </div>
