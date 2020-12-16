@@ -91,7 +91,7 @@ export default class ByGenres extends React.Component {
               Year:
               <input
                 type="text"
-                placeholder="Try something like 1999"
+                placeholder="Try something like 2018"
                 onChange={this.handleChangeYear}
               />
             </label> <label>
